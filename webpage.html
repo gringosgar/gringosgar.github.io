@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="
+                                    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS1JREFUeNp8kr1qhEAUha+/+NPsm9lahmwraN4gtpIlj7Ap7Gz2EfYRYmMnpHTRIohBtNDMnXBl1DEDxytyvnvmgAr8nVf4/9yYPsUPCj6iKJqDIIC+7xe1bQtN04BpmpDn+XeSJC/M+kGgjg9VVbkBJ0rTNC7DMDjs+/7Jtu1rHMdAMAcVReFGnPROS3RdBwZBGIbw03XXt8uFwwuIJr6JGQkiDcMAdV3D8/kM1ePxnqbpXaWr0vVIlmWB67pc4zhCVVVQliV4nndiyNMuUTxib1redR2sOhJIPbcicKkkgjinadolY2/HceQgfhQhWSr2liaKkCyZeh+C8zyvzNvkFSjCInjYW0wkgOYW2iXST4Am2QLZkt1V0bxdIOvNwSzL7kVRSI0H8+tXgAEAOM2Lqs6kqyIAAAAASUVORK5CYII=
+                                    "/>
+    <style type="text/css">
+      body {
+        background:
+          linear-gradient(135deg, #006400 25%, transparent 25%) -50px 0,
+          linear-gradient(225deg, #006400 25%, transparent 25%) -50px 0,
+          linear-gradient(315deg,#006400  25%, transparent 25%),
+          linear-gradient(45deg,#006400  25%, transparent 25%);
+        background-size: 100px 100px;
+        background-color: #030 ;
+        padding: 25px;
+      }
+      a:link,a:visited {
+        color:yellow ;
+        background-color:none;
+        text-decoration: none;
+      }
+      a:hover {
+        color: red;
+        background-color: none;
+        text-decoration: none;
+      }
+      div.main{
+        margin: auto;
+        width:80% ;
+        height: auto;
+        padding: 25px;
+        background-color:#006400;
+        background-image: 
+          url('data:image/png;base64,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');
+        border: 4px solid #808080;
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        color: #fff;
+      }
+      div.menu{
+        width:100% ;
+        text-align: center;
+        padding: 0px;
+        background-color: #006400;
+        background-image: 
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAABCUlEQVR4AZWSoXLDMBQE9UUFBiYBAQICBiEB/c3aM3nO37Xb68Vy3whkDlne1TtbKo/Lu0G5jhI1alodKhLafkMaKwl/3p/3aAMl4Qs4SXNQsgB4JJqlrLiOhYX8ShUpKRmPRqQxqVOiuv0Jr+SQvPajsKR/0+HnVAgYicVlLHimsK7ezVrxQ7+/55JD8ialb29cp8GPiZYlvqXHOcJP8G3++tjmx4UNLIktx4P2jyZcQfLRmiz63Bd+3eZ1Aj5J1V/F6RSWwPYl48o6qeA2i/07SnDqjAIq8nVh9MCMnKjrJDxdS6T/1fYFnHfDm6zOLpPwrBAwJqm98KHiOfxK4UnIipLqZOXdfANM7VttQ4ygLAAAAABJRU5ErkJggg==');
+      }
+      .menubutton {
+        background-color: #006400;
+        border: 1px solid#808080;
+        color: #fff;
+        padding: 4px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .menubutton:hover {
+        background-color: #3e8e41;
+        border-radius: 2px;
+        color: #fff;
+      }
+      div.head{
+        width:100% ;
+        text-align: center;
+        color:#fff;
+        padding: 0px;
+        background-color: #006400;
+        background-image: -webkit-radial-gradient(center center, circle cover, rgba(173,255,47), transparent 50%)
+          ,-webkit-radial-gradient(center center, circle cover, rgba(34,139,34), transparent 50%);
+        background-size: 16px 16px, 100% 100%;
+      }
+      h1 {
+        color: #013220 ;
+        text-shadow: -2px 0 #dcdcdc , 0 2px #dcdcdc , 2px 0 #dcdcdc , 0 -2px #dcdcdc ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      h2 {
+        color: #dcfcd7 ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 20px;
+      }
+      h3 {
+        color: #d1e189 ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 18px;
+      }
+      hr.wdot {
+        border-top: 3px dotted #808080;
+        width: 100%;
+      }
+      .button {
+        background-color: #006400;
+        border: 1px solid#dcdcdc;
+        color: yellow;
+        padding: 4px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .button:hover {
+        background-color: #3e8e41;
+        border-radius: 2px;
+        color: red;
+      }
+    </style>
+    <title>a html   page
+    </title>
+  </head>
+  <body>
+    <div class="main"> 
+      <!-- main div starts here -->
+      <div class="head"> 
+        <!-- header div -->
+        <h1>a simple html / css template
+        </h1>
+      </div>
+      <hr class="wdot">
+      <div class="menu">      
+        <!-- menu div-->
+        <a href=""class=" menubutton" >Home
+        </a> &nbsp;&nbsp;
+        <a href="" class=" menubutton">menu link 1
+        </a> &nbsp;&nbsp;
+        <a href="" class=" menubutton">menu link 2
+        </a>
+      </div>
+      <hr class="wdot">
+      <!-- put stuff below -->
+      <br>
+      <br>
+      this web page was made using stuff from   
+      <br>
+      <br>
+      <a href="http://projects.verou.me/css3patterns/" target="_blank">CSS3 patterns gallery
+      </a>   
+      <br>
+      <a href="https://www.transparenttextures.com/" target="_blank">transparent textures
+      </a>  
+      <br>
+      <a href="https://www.base64-image.de/" target="_blank">base64-image.de
+      </a>  
+      <br>
+      <br>
+      <a href="" class=" button">button
+      </a>
+      <h2>h2
+      </h2>
+      <h3>h3
+      </h3>
+      <br>
+      <hr class="wdot">
+      <br>   
+      <div class="head">
+        <!--footer div -->
+        <center>
+          <img src="
+   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS1JREFUeNp8kr1qhEAUha+/+NPsm9lahmwraN4gtpIlj7Ap7Gz2EfYRYmMnpHTRIohBtNDMnXBl1DEDxytyvnvmgAr8nVf4/9yYPsUPCj6iKJqDIIC+7xe1bQtN04BpmpDn+XeSJC/M+kGgjg9VVbkBJ0rTNC7DMDjs+/7Jtu1rHMdAMAcVReFGnPROS3RdBwZBGIbw03XXt8uFwwuIJr6JGQkiDcMAdV3D8/kM1ePxnqbpXaWr0vVIlmWB67pc4zhCVVVQliV4nndiyNMuUTxib1redR2sOhJIPbcicKkkgjinadolY2/HceQgfhQhWSr2liaKkCyZeh+C8zyvzNvkFSjCInjYW0wkgOYW2iXST4Am2QLZkt1V0bxdIOvNwSzL7kVRSI0H8+tXgAEAOM2Lqs6kqyIAAAAASUVORK5CYII=                                    
+                      ">  this page has no dependencies copy and paste code if you want to use it
+        </center>
+      </div>
+      <!--end of main div -->
+    </div> 
+    <br>
+    <br>
+  </body>
+</html>                                   
+<!--have a nice day -->
