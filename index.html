@@ -109,6 +109,25 @@ textarea {
 border: 2px solid #006400;
   border-radius: 4px;
 }  
+  
+  
+    .trippy {
+    animation-name: animate-trippy;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+@keyframes animate-trippy {
+    0% {
+        filter: hue-rotate(0deg) saturate(3);
+    }
+    80% {
+        filter: hue-rotate(360deg) saturate(2);
+    }
+}
+  
    </style>
 
 
@@ -120,7 +139,7 @@ border: 2px solid #006400;
 <h2>
 <div id="clockbox"></div><br><br>
 </h2>
-  <pre>
+  <pre class=" trippy">
 ██╗  ██╗███████╗██╗     ██╗      ██████╗ 
 ██║  ██║██╔════╝██║     ██║     ██╔═══██╗
 ███████║█████╗  ██║     ██║     ██║   ██║
@@ -195,7 +214,33 @@ border: 2px solid #006400;
 </pre><br><br><br><div id="show1"><pre>
 ⓣⓔⓧⓣ ⓐⓡⓔⓐ</pre></div>
 <div class="text" style="display: none;">
- <textarea id="1" rows="5" cols="80"> </textarea></div><br><br>
+ 
+  <textarea id="myTextarea" rows="6" cols="70"> </textarea>
+ <br>📄 
+ <button onclick="myLoad()" class=" button3">Load</button>
+
+    <button onclick="mySave()" class=" button3">Save</button>
+   
+  <button onclick="deleteItems()"class=" button3">Delete localStorage</button>
+
+    <script>
+      function mySave() {
+        var myContent = document.getElementById("myTextarea").value;
+        localStorage.setItem("myContent", myContent);
+      }
+      function myLoad() {
+        var myContent = localStorage.getItem("myContent");
+        document.getElementById("myTextarea").value = myContent;
+      }
+
+ function deleteItems() {
+  localStorage.clear("myContent");
+}
+    </script>
+ 
+ 
+ 
+ </div><br><br>
 <a href="https://grizzlyganja.neocities.org">
 <pre>
 𝕘𝕣𝕚𝕫𝕫𝕝𝕪 ☮ 𝕘𝕒𝕟𝕛𝕒
