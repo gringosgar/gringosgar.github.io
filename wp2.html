@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="
+                                    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS1JREFUeNp8kr1qhEAUha+/+NPsm9lahmwraN4gtpIlj7Ap7Gz2EfYRYmMnpHTRIohBtNDMnXBl1DEDxytyvnvmgAr8nVf4/9yYPsUPCj6iKJqDIIC+7xe1bQtN04BpmpDn+XeSJC/M+kGgjg9VVbkBJ0rTNC7DMDjs+/7Jtu1rHMdAMAcVReFGnPROS3RdBwZBGIbw03XXt8uFwwuIJr6JGQkiDcMAdV3D8/kM1ePxnqbpXaWr0vVIlmWB67pc4zhCVVVQliV4nndiyNMuUTxib1redR2sOhJIPbcicKkkgjinadolY2/HceQgfhQhWSr2liaKkCyZeh+C8zyvzNvkFSjCInjYW0wkgOYW2iXST4Am2QLZkt1V0bxdIOvNwSzL7kVRSI0H8+tXgAEAOM2Lqs6kqyIAAAAASUVORK5CYII=
+                                    "/>
+    <style type="text/css">
+      body {
+        background-image:
+          radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%),
+          radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%);
+        background-size: 110px 110px;
+        background-color: #C8D3A7;
+        background-position: 0 0, 55px 55px;
+        padding: 25px;
+      }
+      a.one:link {
+        color:yellow;
+      }
+      a.one:visited {
+        color:red;
+      }
+      a.one:hover {
+        color:black;
+      }
+      a.two:link {
+        color:#ff0000;
+      }
+      a.two:visited {
+        color:#0000ff;
+      }
+      a.two:hover {
+        font-size:150%;
+      }
+      a.menubutton:link, a.menubutton:visited {
+        background-color: #e3dac9;
+        color: #006400;
+        border: 1px solid #808080;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+      }
+      a.menubutton:hover, a.menubutton:active {
+        background-color: green;
+        color: white;
+      }
+      a:link,a:visited {
+        color:green ;
+        background-color:none;
+        text-decoration: none;
+      }
+      a:hover {
+        color: red;
+        background-color: none;
+        text-decoration: none;
+      }
+      a.button:link, a.button:visited {
+        background-color: white;
+        color: lime;
+        border: 2px solid #808080;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+      }
+      a.button:hover, a.button:active {
+        background-color: green;
+        color: white;
+      }
+      h1 {
+        color: #013220 ;
+        text-shadow: -2px 0 #fff , 0 2px #fff , 2px 0 #fff , 0 -2px #fff ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      h2 {
+        color: #006400 ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 20px;
+      }
+      h3 {
+        color: #738678 ;
+        font-family: 'Ultra', sans-serif;
+        font-size: 18px;
+      }
+      hr.wdot {
+        border-top: 3px dotted #808080;
+        width: 100%;
+      }
+      div.main{
+        margin: auto;
+        width:80% ;
+        height: auto;
+        padding: 25px;
+        background-color:#ecebbd;
+        border: 4px solid #808080;
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        color: green;
+      }
+      div.menu{
+        width:100% ;
+        text-align: center;
+        padding: 0px;
+        background-color:#ecebbd;
+        ;
+        background-image: 
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAABCUlEQVR4AZWSoXLDMBQE9UUFBiYBAQICBiEB/c3aM3nO37Xb68Vy3whkDlne1TtbKo/Lu0G5jhI1alodKhLafkMaKwl/3p/3aAMl4Qs4SXNQsgB4JJqlrLiOhYX8ShUpKRmPRqQxqVOiuv0Jr+SQvPajsKR/0+HnVAgYicVlLHimsK7ezVrxQ7+/55JD8ialb29cp8GPiZYlvqXHOcJP8G3++tjmx4UNLIktx4P2jyZcQfLRmiz63Bd+3eZ1Aj5J1V/F6RSWwPYl48o6qeA2i/07SnDqjAIq8nVh9MCMnKjrJDxdS6T/1fYFnHfDm6zOLpPwrBAwJqm98KHiOfxK4UnIipLqZOXdfANM7VttQ4ygLAAAAABJRU5ErkJggg==');
+      }
+      div.head{
+        width:100% ;
+        text-align: center;
+        color:green;
+        padding: 0px;
+        background-color: #006400;
+        background-image: 
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAABCUlEQVR4AZWSoXLDMBQE9UUFBiYBAQICBiEB/c3aM3nO37Xb68Vy3whkDlne1TtbKo/Lu0G5jhI1alodKhLafkMaKwl/3p/3aAMl4Qs4SXNQsgB4JJqlrLiOhYX8ShUpKRmPRqQxqVOiuv0Jr+SQvPajsKR/0+HnVAgYicVlLHimsK7ezVrxQ7+/55JD8ialb29cp8GPiZYlvqXHOcJP8G3++tjmx4UNLIktx4P2jyZcQfLRmiz63Bd+3eZ1Aj5J1V/F6RSWwPYl48o6qeA2i/07SnDqjAIq8nVh9MCMnKjrJDxdS6T/1fYFnHfDm6zOLpPwrBAwJqm98KHiOfxK4UnIipLqZOXdfANM7VttQ4ygLAAAAABJRU5ErkJggg==');
+      }
+      div.foot{
+        width:100% ;
+        text-align: center;
+        color:#fff;
+        padding: 0px;
+        background-color: #006400;
+        background-image: 
+          url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAABCUlEQVR4AZWSoXLDMBQE9UUFBiYBAQICBiEB/c3aM3nO37Xb68Vy3whkDlne1TtbKo/Lu0G5jhI1alodKhLafkMaKwl/3p/3aAMl4Qs4SXNQsgB4JJqlrLiOhYX8ShUpKRmPRqQxqVOiuv0Jr+SQvPajsKR/0+HnVAgYicVlLHimsK7ezVrxQ7+/55JD8ialb29cp8GPiZYlvqXHOcJP8G3++tjmx4UNLIktx4P2jyZcQfLRmiz63Bd+3eZ1Aj5J1V/F6RSWwPYl48o6qeA2i/07SnDqjAIq8nVh9MCMnKjrJDxdS6T/1fYFnHfDm6zOLpPwrBAwJqm98KHiOfxK4UnIipLqZOXdfANM7VttQ4ygLAAAAABJRU5ErkJggg==');
+      }
+    </style>
+    <title>a html   page
+    </title>
+  </head>
+  <body>
+    <div class="main"> 
+      <!-- main div starts here -->
+      <div class="head"> 
+        <!-- header div -->
+        <h1>a simple html / css template
+        </h1>
+      </div>
+      <hr class="wdot">
+      <div class="menu">      
+        <!-- menu div-->
+        <a class=" menubutton" href="https://github.com/gringosgar/gringosgar.github.io/blob/master/wp2.html" target="_blank" >code
+        </a> &nbsp;&nbsp;
+        <a class=" menubutton" href="/wp1.html">version 1
+        </a> &nbsp;&nbsp;
+        <a class=" menubutton"   href="/wp3.html">version 3
+        </a>
+      </div>
+      <hr class="wdot">
+      <!-- put stuff below -->
+      <br>
+      <br>
+      this web page wp2.html was made using stuff from   
+      <br>
+      <br>
+       
+         <a href="http://projects.verou.me/css3patterns/" target="_blank">CSS3 patterns gallery
+      </a>   
+    <br>
+    <br>
+    
+       <a href="https://www.transparenttextures.com/" target="_blank">transparent textures
+    </a>  
+  <br>
+  <br>
+  
+     <a href="https://www.base64-image.de/" target="_blank">base64-image.de
+  </a>  
+<br>
+<br>
+<a class="button"  href="">button
+</a>
+<h2>h2
+</h2>
+<h3>h3
+</h3>
+<br>
+<hr class="wdot">
+<br>   
+<div class="foot">
+  <!--footer div -->
+  <center>
+    <img src="
+              data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS1JREFUeNp8kr1qhEAUha+/+NPsm9lahmwraN4gtpIlj7Ap7Gz2EfYRYmMnpHTRIohBtNDMnXBl1DEDxytyvnvmgAr8nVf4/9yYPsUPCj6iKJqDIIC+7xe1bQtN04BpmpDn+XeSJC/M+kGgjg9VVbkBJ0rTNC7DMDjs+/7Jtu1rHMdAMAcVReFGnPROS3RdBwZBGIbw03XXt8uFwwuIJr6JGQkiDcMAdV3D8/kM1ePxnqbpXaWr0vVIlmWB67pc4zhCVVVQliV4nndiyNMuUTxib1redR2sOhJIPbcicKkkgjinadolY2/HceQgfhQhWSr2liaKkCyZeh+C8zyvzNvkFSjCInjYW0wkgOYW2iXST4Am2QLZkt1V0bxdIOvNwSzL7kVRSI0H8+tXgAEAOM2Lqs6kqyIAAAAASUVORK5CYII=                                    
+              ">  this page wp2.html has no dependencies copy and paste 
+   
+       <a class=" one" href="https://github.com/gringosgar/gringosgar.github.io/blob/master/wp2.html" target="_blank">code
+    </a> if you want to use it
+  </center>
+</div>
+<!--end of main div -->
+</div> 
+<br>
+<br>
+</body>
+</html>                                   
+<!--have a nice day -->
